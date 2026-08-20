@@ -34,15 +34,15 @@ Si falta la plataforma, pregunta si quiere `web`, `android` o `ios` antes de gen
 
 ### Web
 
-Entrega HTML semántico, CSS responsive y JavaScript solo cuando haya interacción. Si el proyecto usa React, Vue u otro framework, sigue sus convenciones existentes. Comprueba al menos escritorio y móvil cuando exista una vista ejecutable.
+Entrega HTML semántico, CSS responsive y JavaScript solo cuando haya interacción. Si el proyecto usa React, Vue u otro framework, sigue sus convenciones existentes. Comprueba al menos escritorio y móvil cuando exista una vista ejecutable.. El contenido debe guardarse en un directorio llamado web_(codigo_alearorio) para evitar conflictos con otros assets.
 
 ### Android
 
-Entrega Kotlin con Jetpack Compose por defecto. Incluye estados de UI, recursos accesibles, dimensiones adaptables y una estructura que pueda integrarse en una pantalla existente. Usa XML solo si el proyecto ya está basado en Views.
+Entrega Kotlin con Jetpack Compose por defecto. Incluye estados de UI, recursos accesibles, dimensiones adaptables y una estructura que pueda integrarse en una pantalla existente. Usa XML solo si el proyecto ya está basado en Views. El contenido debe guardarse en un directorio llamado android_(codigo_alearorio) para evitar conflictos con otros assets.
 
 ### iOS
 
-Entrega Swift con SwiftUI por defecto. Incluye previews cuando el proyecto las use, estados de UI, Dynamic Type, VoiceOver y layouts adaptables. Usa UIKit solo si el proyecto ya lo requiere.
+Entrega Swift con SwiftUI por defecto. Incluye previews cuando el proyecto las use, estados de UI, Dynamic Type, VoiceOver y layouts adaptables. Usa UIKit solo si el proyecto ya lo requiere. El contenido debe guardarse en un directorio llamado ios_(codigo_alearorio) para evitar conflictos con otros assets.
 
 ## Respuesta
 
