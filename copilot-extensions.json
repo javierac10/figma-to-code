@@ -1,0 +1,75 @@
+{
+  "name": "figma-to-code-agent",
+  "displayName": "Figma to Code Agent",
+  "version": "2.0.0",
+  "description": "Convierte diseños de Figma en código para web, Android o iOS usando el MCP oficial de Figma",
+  "publisher": "javier-araujo",
+  "icon": "assets/icon.png",
+  "repository": "https://github.com/javier-araujo/demographic-classifier-agent",
+  "documentation": "README.md",
+  "extensionDependencies": [],
+  "engines": {
+    "copilot": ">=1.0.0"
+  },
+  "copilot": {
+    "chat": {
+      "commands": [
+        {
+          "command": "figma-to-code",
+          "title": "Convertir Figma a código",
+          "description": "Convierte una URL de Figma a web, Android o iOS",
+          "category": "Design"
+        },
+        {
+        }
+      ],
+      "contextMenus": [
+        {
+          "command": "figma-to-code",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "mcpServers": [
+      {
+        "name": "figma",
+        "endpoint": "https://mcp.figma.com/mcp",
+        "description": "Servidor MCP oficial de Figma para inspeccionar diseños y generar contexto de código"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:figma-to-code"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "figma-to-code",
+        "title": "Convertir Figma a código"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Figma to Code Configuration",
+        "properties": {
+          "figmaToCode.mcpServerUrl": {
+            "type": "string",
+            "default": "https://mcp.figma.com/mcp",
+            "description": "URL del servidor MCP oficial de Figma"
+          },
+          "figmaToCode.defaultTarget": {
+            "type": "string",
+            "enum": ["web", "android", "ios"],
+            "default": "web",
+            "description": "Plataforma objetivo para el código generado"
+          }
+        }
+      }
+    ]
+  },
+  "permissions": [
+    "copilot.chat.executeAction",
+    "copilot.chat.getTelemetry",
+    "webview.getSecureUrl"
+  ]
+}
